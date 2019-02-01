@@ -25,6 +25,6 @@ async def save_image(context, url, filename):
 @MyBot.command(pass_context=True)
 async def load_image(context, filename):
     with open(image_directory + filename + ".jpg", 'rb') as image:
-        await context.channel.send(content = "Here's " + filename + ".", file = discord.File(image))
+        await context.channel.send(content = "Loaded " + filename + ".", file = discord.File(image))
 
 MyBot.run(AUTH_TOKEN)
